@@ -219,10 +219,6 @@ ol {
   color: #545050;
 }
 
-.hyphen {
-  vertical-align: +10%;
-}
-
 .content__list {
   position: relative;
   block-size: 300px;
@@ -243,7 +239,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 1px;
 }
 .content__card-link:focus {
   outline: none;
