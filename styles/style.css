@@ -50,7 +50,7 @@ ol {
   position: relative;
   inline-size: 711px;
   block-size: 386px;
-  margin-block-end: 16px;
+  margin-block-end: 17px;
 }
 
 .result__video {
@@ -74,7 +74,7 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  margin-block-end: 5px;
+  margin-block-end: 4px;
 }
 
 .search-form__label {
@@ -91,12 +91,12 @@ ol {
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
   outline-offset: 1px;
-  outline: 1px solid #FFFFFF;
+  outline: 1px solid currentColor;
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible + span){
   outline-offset: 1px;
-  outline: 1px solid #FFFFFF;
+  outline: 1px solid currentColor;
 }
 
 .visually-hidden {
@@ -114,9 +114,9 @@ ol {
   block-size: 27px;
   background-color: transparent;
   border-inline-start: none;
-  border-block-start: 1px solid #FFFFFF;
+  border-block-start: 1px solid currentColor;
   border-inline-end: none;
-  border-block-end: 1px solid #FFFFFF;
+  border-block-end: 1px solid currentColor;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -132,14 +132,14 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #FFFFFF;
+  border: 1px solid currentColor;
 }
 
 .search-form__checkbox-list {
   display: flex;
   justify-content: space-between;
   column-gap: 15px;
-  block-size: 22px;
+  padding-block-start: 1px;
 }
 
 .search-form__checkbox-list .search-form__label:hover {
@@ -148,25 +148,25 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: block;
   inline-size:  19px;
   block-size: 19px;
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid currentColor;
   cursor: pointer;
 }
 
 .search-form__checkbox:checked + span {
-  background-color: #FFFFFF;
-  outline: 1px solid #000000;
+  background-color: currentColor;
+  outline: 1px solid #000;
   outline-offset: -2px;
 }
 
 .button {
   background-color: transparent;
   font-family: 'Fira Sans Condensed', sans-serif;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  color: currentColor;
+  border: 1px solid currentColor;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -189,7 +189,7 @@ ol {
 
 .button:focus-visible {
   outline-offset: 1px;
-  outline: 1px solid #FFFFFF;
+  outline: 1px solid currentColor;
 }
 
 .search-form__submit-button {
@@ -210,23 +210,23 @@ ol {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 0.94;
   text-transform: uppercase;
-  margin-block-end: 26px;
+  margin-block-end: 21px;
 }
 
 .content__accent {
   color: #545050;
 }
 
-.content__list {
-  position: relative;
-  block-size: 298px;
-  overflow-y: auto;
+.hyphen {
+  vertical-align: +10%;
 }
 
-.content__list::-webkit-scrollbar {
-  width: 0;
+.content__list {
+  position: relative;
+  block-size: 300px;
+  overflow-y: auto;
 }
 
 .content__list-item{
@@ -235,10 +235,10 @@ ol {
 
 .content__card-link {
   display: block;
-  margin: 2px;
-  padding: 2px;
+  margin: 1px;
+  padding: 2px 0;
   text-decoration: none;
-  color: #FFFFFF;
+  color: currentColor;
 }
 
 .content__card-link:hover {
@@ -251,7 +251,11 @@ ol {
 
 .content__card-link:focus-visible {
   outline-offset: 0;
-  outline: 1px solid #FFFFFF;
+  outline: 1px solid currentColor;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link_current {
@@ -260,20 +264,27 @@ ol {
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 1fr 194px;
+  grid-template-columns: 200px 194px;
   align-items: start;
+  padding-inline-start: 1px;
 }
 
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 29px;
+  font-size: 30px;
+  line-height: 1.0;
   text-transform: uppercase;
-  margin-block-end: 6px;
+  margin-block-end: 3px;
+  padding-block-start: 4px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  line-height: 0.9em;
+  font-size: 16px;
+  line-height: 16.2px;
 }
 
 .content__video-card-thumbnail {
